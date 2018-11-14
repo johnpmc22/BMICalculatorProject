@@ -34,11 +34,11 @@ namespace BPCalculator
         // calculate BP category
         public BPCategory Category
         {       
-          
             get
             {
+                // TODO: Need to include proper exception handling
                 try
-                {
+                { 
                     int systolicValue = int.Parse(Systolic.ToString());
                     int diastolicValue = int.Parse(Diastolic.ToString());
 
@@ -58,7 +58,7 @@ namespace BPCalculator
                     {
                         return BPCategory.High;
                     }
-                } catch (Exception) {  return BPCategory.Exception; }
+                } catch (Exception) {  return BPCategory.Exception; } 
                 return BPCategory.Unknown;
             }
         }
