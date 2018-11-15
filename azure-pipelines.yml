@@ -29,8 +29,8 @@ steps:
 - task: VSTest@2
   inputs:
     testAssemblyVer2: |
-     **\bin\$(testConfiguration)\*UnitTestProject1*.dll
-     **\bin\$(testConfiguration)\*UnitTestProject1*.dll
+     **\bin\$(testConfiguration)\netcoreapp2.1\*UnitTestProject1*.dll
+     **\bin\$(testConfiguration)\netcoreapp2.1\*UnitTestProject1*.dll
     codeCoverageEnabled: true
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
