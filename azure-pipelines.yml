@@ -10,6 +10,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  testConfiguration: "Debug"
 
 steps:
 - task: NuGetToolInstaller@0
@@ -28,8 +29,8 @@ steps:
 - task: VSTest@2
   inputs:
     testAssemblyVer2: |
-     **\bin\$(BuildConfiguration)\*UnitTestProject1*.dll
-     **\bin\$(BuildConfiguration)\*UnitTestProject1*.dll
+     **\bin\$(testConfiguration)\*UnitTestProject1*.dll
+     **\bin\$(testConfiguration)\*UnitTestProject1*.dll
     codeCoverageEnabled: true
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
