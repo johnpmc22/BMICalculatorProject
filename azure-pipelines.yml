@@ -10,7 +10,6 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  testConfiguration: "Debug"
 
 steps:
 - task: NuGetToolInstaller@0
@@ -29,8 +28,8 @@ steps:
 - task: VSTest@2
   inputs:
     testAssemblyVer2: |
-     **\bin\$(testConfiguration)\netcoreapp2.1\*UnitTestProject1*.dll
-     **\bin\$(testConfiguration)\netcoreapp2.1\*AcceptanceTest*.dll 
+     **\bin\$(BuildConfiguration)\netcoreapp2.1\*UnitTestProject1*.dll
+     **\bin\$(BuildConfiguration)\netcoreapp2.1\*UnitTestProject1*.dll 
     codeCoverageEnabled: true
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
