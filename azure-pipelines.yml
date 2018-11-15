@@ -2,30 +2,31 @@
 # Build and test ASP.NET Core projects targeting the full .NET Framework.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
-
-pool:
-  vmImage: 'VS2017-Win2016'
-
-variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+resources:
+- repo: self
+queue:
+  name: Hosted VS2017
+  demands: 
+  - msbuild
+  - vstest
 
 steps:
 - task: NuGetToolInstaller@0
 
 - task: NuGetCommand@2
   inputs:
-    restoreSolution: '$(solution)'
+    restoreSolution: '$(Parameters.solution)'
 
-- task: VSBuild@1
+- task: MSBuild@1
   inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
-    platform: '$(buildPlatform)'
+    platform: '$(BuildPlatform)'
     configuration: '$(buildConfiguration)'
 
 - task: VSTest@2
   inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    testAssemblyVer2: |
+     **\bin\$(BuildConfiguration)\*UnitTestProject1*.dll
+     **\bin\$(BuildConfiguration)\*UnitTestProject1*.dll
+    codeCoverageEnabled: true
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
