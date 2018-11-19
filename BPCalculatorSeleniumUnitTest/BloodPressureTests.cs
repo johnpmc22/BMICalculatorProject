@@ -15,7 +15,8 @@ namespace BPCalculatorSeleniumUnitTest
     public class BloodPressureTests
     {
         private TestContext testContextInstance;
-        private IWebDriver driver;
+        //private IWebDriver driver;
+        private IWebDriver driver = new ChromeDriver(@"C:\Users\ejohmci\Downloads\chromedriver_win32");
         private string appURL;
 
         public BloodPressureTests()
