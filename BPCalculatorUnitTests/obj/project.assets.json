@@ -14562,11 +14562,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\UnitTestProject1\\UnitTestProject1.csproj",
-      "projectName": "UnitTestProject1",
-      "projectPath": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\UnitTestProject1\\UnitTestProject1.csproj",
+      "projectUniqueName": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\BPCalculatorUnitTests\\BPCalculatorUnitTests.csproj",
+      "projectName": "BPCalculatorUnitTests",
+      "projectPath": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\BPCalculatorUnitTests\\BPCalculatorUnitTests.csproj",
       "packagesPath": "C:\\Users\\ejohmci\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\UnitTestProject1\\obj\\",
+      "outputPath": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\BPCalculatorUnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
