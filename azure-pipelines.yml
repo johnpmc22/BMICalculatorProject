@@ -28,8 +28,8 @@ steps:
 - task: VSTest@2
   inputs:
     testAssemblyVer2: |
-     **\bin\$(BuildConfiguration)\netcoreapp2.1\*UnitTestProject1*.dll
-     **\bin\$(BuildConfiguration)\netcoreapp2.1\*UnitTestProject1*.dll 
+     **\bin\$(BuildConfiguration)\netcoreapp2.1\*BPCalculatorUnitTests*.dll
+     **\bin\$(BuildConfiguration)\netcoreapp2.1\*BPCalculatorUnitTests*.dll 
     codeCoverageEnabled: true
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
