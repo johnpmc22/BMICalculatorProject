@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "UnitTestProject1": {
+      "commandName": "Project"
+    },
+    "BPCalculator.UnitTests": {
+      "commandName": "Executable"
+    }
+  }
+}

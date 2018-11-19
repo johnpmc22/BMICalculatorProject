@@ -1,10 +1,10 @@
 using BPCalculator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestProject1
+namespace BPCalculator.UnitTests
 {
     [TestClass]
-    public class UnitTest1
+    public class BloodPressureTests
     {
         [TestMethod]
         public void BPCategory_UserHasHighBloodPressure_ReturnsTrue()

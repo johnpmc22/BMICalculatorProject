@@ -1,0 +1,17 @@
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\bin\Release\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\bin\Release\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\bin\Release\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\bin\Release\netcoreapp2.1\BPCalculator.UnitTests.deps.json
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\bin\Release\netcoreapp2.1\BPCalculator.UnitTests.runtimeconfig.json
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\bin\Release\netcoreapp2.1\BPCalculator.UnitTests.runtimeconfig.dev.json
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\bin\Release\netcoreapp2.1\BPCalculator.UnitTests.dll
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\bin\Release\netcoreapp2.1\BPCalculator.UnitTests.pdb
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\bin\Release\netcoreapp2.1\BPCalculator.dll
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\bin\Release\netcoreapp2.1\BPCalculator.pdb
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\obj\Release\netcoreapp2.1\BPCalculator.UnitTests.csprojAssemblyReference.cache
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\obj\Release\netcoreapp2.1\BPCalculator.UnitTests.csproj.CoreCompileInputs.cache
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\obj\Release\netcoreapp2.1\BPCalculator.UnitTests.AssemblyInfoInputs.cache
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\obj\Release\netcoreapp2.1\BPCalculator.UnitTests.AssemblyInfo.cs
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\obj\Release\netcoreapp2.1\BPCalculator.UnitTests.csproj.CopyComplete
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\obj\Release\netcoreapp2.1\BPCalculator.UnitTests.dll
+C:\Users\ejohmci\repos\BMICalculatorProject\UnitTestProject1\obj\Release\netcoreapp2.1\BPCalculator.UnitTests.pdb

@@ -14562,9 +14562,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\UnitTestProject1\\UnitTestProject1.csproj",
-      "projectName": "UnitTestProject1",
-      "projectPath": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\UnitTestProject1\\UnitTestProject1.csproj",
+      "projectUniqueName": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\UnitTestProject1\\BPCalculator.UnitTests.csproj",
+      "projectName": "BPCalculator.UnitTests",
+      "projectPath": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\UnitTestProject1\\BPCalculator.UnitTests.csproj",
       "packagesPath": "C:\\Users\\ejohmci\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\UnitTestProject1\\obj\\",
       "projectStyle": "PackageReference",
