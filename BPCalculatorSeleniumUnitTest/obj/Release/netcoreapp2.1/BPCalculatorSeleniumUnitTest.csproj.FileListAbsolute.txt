@@ -1,0 +1,13 @@
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\bin\Release\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\bin\Release\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\bin\Release\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\bin\Release\netcoreapp2.1\BPCalculatorSeleniumUnitTest.deps.json
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\bin\Release\netcoreapp2.1\BPCalculatorSeleniumUnitTest.runtimeconfig.json
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\bin\Release\netcoreapp2.1\BPCalculatorSeleniumUnitTest.runtimeconfig.dev.json
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\bin\Release\netcoreapp2.1\BPCalculatorSeleniumUnitTest.dll
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\bin\Release\netcoreapp2.1\BPCalculatorSeleniumUnitTest.pdb
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\obj\Release\netcoreapp2.1\BPCalculatorSeleniumUnitTest.csproj.CoreCompileInputs.cache
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\obj\Release\netcoreapp2.1\BPCalculatorSeleniumUnitTest.AssemblyInfoInputs.cache
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\obj\Release\netcoreapp2.1\BPCalculatorSeleniumUnitTest.AssemblyInfo.cs
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\obj\Release\netcoreapp2.1\BPCalculatorSeleniumUnitTest.dll
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\obj\Release\netcoreapp2.1\BPCalculatorSeleniumUnitTest.pdb
