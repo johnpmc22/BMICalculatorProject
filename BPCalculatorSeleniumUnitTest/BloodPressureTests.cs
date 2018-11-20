@@ -1,10 +1,9 @@
-using System;
-using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
+using System;
 
 namespace BPCalculatorSeleniumUnitTest
 {
@@ -15,8 +14,9 @@ namespace BPCalculatorSeleniumUnitTest
     public class BloodPressureTests
     {
         private TestContext testContextInstance;
-        //private IWebDriver driver;
-        private IWebDriver driver = new ChromeDriver(@"C:\Users\ejohmci\Downloads\chromedriver_win32");
+        private IWebDriver driver;
+        //private IWebDriver driver = new ChromeDriver(@"C:\Users\ejohmci\Downloads\chromedriver_win32");
+        //private IWebDriver driver = new ChromeDriver(Environment.GetEnvironmentVariable("ChromeWebDriver"));
         private string appURL;
 
         public BloodPressureTests()
