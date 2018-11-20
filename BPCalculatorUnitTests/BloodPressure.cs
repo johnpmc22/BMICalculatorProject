@@ -1,4 +1,6 @@
 using BPCalculator;
+using BPCalculator.Pages;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BPCalculatorUnitTests
