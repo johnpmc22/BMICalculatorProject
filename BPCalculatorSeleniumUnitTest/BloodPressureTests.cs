@@ -15,8 +15,6 @@ namespace BPCalculatorSeleniumUnitTest
     {
         private TestContext testContextInstance;
         private IWebDriver driver;
-        //private IWebDriver driver = new ChromeDriver(@"C:\Users\ejohmci\Downloads\chromedriver_win32");
-        //private IWebDriver driver = new ChromeDriver(Environment.GetEnvironmentVariable("ChromeWebDriver"));
         private string appURL;
 
         public BloodPressureTests()
@@ -30,8 +28,9 @@ namespace BPCalculatorSeleniumUnitTest
             driver.Navigate().GoToUrl(appURL + "/");
             driver.FindElement(By.Id("sb_form_q")).SendKeys("Azure Pipelines");
             driver.FindElement(By.Id("sb_form_go")).Click();
-            driver.FindElement(By.XPath("//ol[@id='b_results']/li/h2/a/strong[3]")).Click();
+            driver.FindElement(By.XPath("//ol[@id='b_results']/li/h2/a")).Click();
             Assert.IsTrue(driver.Title.Contains("Azure Pipelines"), "Verified title of the page");
+            
         }
 
         /// <summary>
