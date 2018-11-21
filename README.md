@@ -1,4 +1,4 @@
-# BMICalculatorProject
+# BPCalculatorProject
 MSC CI/CD Pipeline project 2018
 Institute of Technology Tallaght, Department of Computing
 M.Sc. in Dev-Ops
