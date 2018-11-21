@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Support.UI;
 using System;
 
 namespace BPCalculatorSeleniumUnitTest
@@ -17,20 +18,107 @@ namespace BPCalculatorSeleniumUnitTest
         private IWebDriver driver;
         private string appURL;
 
+
         public BloodPressureTests()
         {
         }
 
         [TestMethod]
         [TestCategory("Chrome")]
-        public void TheBingSearchTest()
+        public void BasicPageLoadHeaderCheck_True()
         {
             driver.Navigate().GoToUrl(appURL + "/");
-            driver.FindElement(By.Id("sb_form_q")).SendKeys("Azure Pipelines");
-            driver.FindElement(By.Id("sb_form_go")).Click();
-            driver.FindElement(By.XPath("//ol[@id='b_results']/li/h2/a")).Click();
-            Assert.IsTrue(driver.Title.Contains("Azure Pipelines"), "Verified title of the page");
-            
+            driver.FindElement(By.XPath("/html/body/div/h4")).Click();
+            Assert.IsTrue(driver.Title.Contains("BP Category Calculator"), "Verified title of the page");
+        }
+
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void BasicPageLoadHeaderCheck_False()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.XPath("//*[@id='form1']/div[1]/label")).Click();
+            Assert.IsFalse(driver.Title.Contains("BPI Category Calculators"), "Verified title of the page");
+        }
+
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void ReturnNormalBloodPressure_True()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Systolic")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).SendKeys("110");
+            driver.FindElement(By.Id("BP_Diastolic")).Click();
+            driver.FindElement(By.XPath("//*[@id='form1']/div[3]"));
+            Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("Normal Blood Pressure"));
+        }
+
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void ReturnNormalBloodPressure_False()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Systolic")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).SendKeys("130");
+            driver.FindElement(By.Id("BP_Diastolic")).Click();
+            driver.FindElement(By.XPath("//*[@id='form1']/div[3]"));
+            Assert.IsFalse(driver.FindElement(By.TagName("body")).Text.Contains("Normal Blood Pressure"));
+        }
+
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void ReturnHighBloodPressure_True()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Systolic")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).SendKeys("170");
+            driver.FindElement(By.Id("BP_Diastolic")).Clear();
+            driver.FindElement(By.Id("BP_Diastolic")).SendKeys("95");
+            driver.FindElement(By.Id("BP_Systolic")).Click();
+            driver.FindElement(By.XPath("//*[@id='form1']/div[3]"));
+            Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("High Blood Pressure"));
+        }
+
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void ReturnHighBloodPressure_False()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Systolic")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).SendKeys("100");
+            driver.FindElement(By.Id("BP_Diastolic")).Clear();
+            driver.FindElement(By.Id("BP_Diastolic")).SendKeys("60");
+            driver.FindElement(By.Id("BP_Systolic")).Click();
+            driver.FindElement(By.XPath("//*[@id='form1']/div[3]"));
+            Assert.IsFalse(driver.FindElement(By.TagName("body")).Text.Contains("High Blood Pressure"));
+        }
+
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void SystolicGreaterThanDiastolic_True()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Systolic")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).SendKeys("89");
+            driver.FindElement(By.Id("BP_Diastolic")).Clear();
+            driver.FindElement(By.Id("BP_Diastolic")).SendKeys("95");
+            driver.FindElement(By.Id("BP_Systolic")).Click();
+            driver.FindElement(By.XPath("//*[@id='form1']/div[3]"));
+            Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("Systolic must be greater than Diastolic"));
+        }
+
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void SystolicGreaterThanDiastolic_False()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Systolic")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).SendKeys("89");
+            driver.FindElement(By.Id("BP_Diastolic")).Clear();
+            driver.FindElement(By.Id("BP_Diastolic")).SendKeys("63");
+            driver.FindElement(By.Id("BP_Systolic")).Click();
+            driver.FindElement(By.XPath("//*[@id='form1']/div[3]"));
+            Assert.IsFalse(driver.FindElement(By.TagName("body")).Text.Contains("Systolic must be greater than Diastolic"));
         }
 
         /// <summary>
@@ -52,7 +140,7 @@ namespace BPCalculatorSeleniumUnitTest
         [TestInitialize()]
         public void SetupTest()
         {
-            appURL = "http://www.bing.com/";
+            appURL = "https://bpcalculator20181121110822.azurewebsites.net/bloodpressure";
 
             string browser = "Chrome";
             switch (browser)

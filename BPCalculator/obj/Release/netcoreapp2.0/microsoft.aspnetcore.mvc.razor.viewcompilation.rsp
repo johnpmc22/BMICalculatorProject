@@ -1,0 +1,13 @@
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=BPCalculator
+--content-root=C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator
+--file=C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator\Pages\About.cshtml
+--file=C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator\Pages\BloodPressure.cshtml
+--file=C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator\Pages\Contact.cshtml
+--file=C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator\Pages\Error.cshtml
+--file=C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator\Pages\Index.cshtml
+--file=C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator\Pages\_Layout.cshtml
+--file=C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator\Pages\_ValidationScriptsPartial.cshtml
+--file=C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator\Pages\_ViewImports.cshtml
+--file=C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator\Pages\_ViewStart.cshtml
