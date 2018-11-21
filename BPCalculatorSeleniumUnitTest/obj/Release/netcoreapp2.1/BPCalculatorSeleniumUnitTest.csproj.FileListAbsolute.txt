@@ -12,3 +12,6 @@ C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\obj\Rel
 C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\obj\Release\netcoreapp2.1\BPCalculatorSeleniumUnitTest.dll
 C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\obj\Release\netcoreapp2.1\BPCalculatorSeleniumUnitTest.pdb
 C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\obj\Release\netcoreapp2.1\BPCalculatorSeleniumUnitTest.csprojAssemblyReference.cache
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\bin\Release\netcoreapp2.1\BPCalculator.dll
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\bin\Release\netcoreapp2.1\BPCalculator.pdb
+C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculatorSeleniumUnitTest\obj\Release\netcoreapp2.1\BPCalculatorSeleniumUnitTest.csproj.CopyComplete
