@@ -140,7 +140,7 @@ namespace BPCalculatorSeleniumUnitTest
         [TestInitialize()]
         public void SetupTest()
         {
-            appURL = "http://localhost:40327/bloodpressure";
+            appURL = "https://bpcalculator20181121110822.azurewebsites.net/bloodpressure";
 
             string browser = "Chrome";
             switch (browser)
