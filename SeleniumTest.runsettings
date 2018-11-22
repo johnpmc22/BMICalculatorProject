@@ -2,6 +2,6 @@
 <RunSettings>
   <!-- Parameters used by tests at runtime -->
   <TestRunParameters>
-    <Parameter name="appURL" value="https://bpcalculator20181121110822.azurewebsites.net/bloodpressure"/>
+    <Parameter name="webAppUrl" value="https://bpcalculator20181121110822.azurewebsites.net/bloodpressure"/>
   </TestRunParameters>
 </RunSettings>

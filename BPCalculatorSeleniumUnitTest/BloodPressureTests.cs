@@ -165,7 +165,7 @@ namespace BPCalculatorSeleniumUnitTest
         [TestInitialize()]
         public void SetupTest()
         {
-            appURL = TestContext.Properties["appURL"].ToString();
+            appURL = TestContext.Properties["webAppUrl"].ToString();
             string browser = "Chrome";
             switch (browser)
             {
