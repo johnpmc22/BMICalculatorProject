@@ -121,6 +121,32 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsFalse(driver.FindElement(By.TagName("body")).Text.Contains("Systolic must be greater than Diastolic"));
         }
 
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void InvalidFields_True()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Systolic")).Clear();
+            driver.FindElement(By.Id("BP_Diastolic")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).Click();
+            driver.FindElement(By.XPath("//*[@id='form1']/div[2]/span"));
+            driver.FindElement(By.CssSelector("#form1 > div:nth-child(2) > span"));
+            Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("The value \'\' is invalid."));
+        }
+
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void InvalidFields_False()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Systolic")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).SendKeys("89");
+            driver.FindElement(By.Id("BP_Diastolic")).Clear();
+            driver.FindElement(By.Id("BP_Diastolic")).SendKeys("63");
+            driver.FindElement(By.Id("BP_Systolic")).Click();
+            Assert.IsFalse(driver.FindElement(By.TagName("body")).Text.Contains("The value \'\' is invalid."));
+        }
+
         /// <summary>
         ///Gets or sets the test context which provides
         ///information about and functionality for the current test run.
