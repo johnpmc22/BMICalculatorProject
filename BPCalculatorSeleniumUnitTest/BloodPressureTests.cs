@@ -3,7 +3,6 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
-using OpenQA.Selenium.Support.UI;
 using System;
 
 namespace BPCalculatorSeleniumUnitTest
@@ -166,8 +165,7 @@ namespace BPCalculatorSeleniumUnitTest
         [TestInitialize()]
         public void SetupTest()
         {
-            appURL = "https://bpcalculator20181121110822.azurewebsites.net/bloodpressure";
-
+            appURL = TestContext.Properties["appURL"].ToString();
             string browser = "Chrome";
             switch (browser)
             {
