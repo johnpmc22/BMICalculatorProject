@@ -165,7 +165,8 @@ namespace BPCalculatorSeleniumUnitTest
         [TestInitialize()]
         public void SetupTest()
         {
-            appURL = TestContext.Properties["webAppUrl"].ToString();
+            //appURL = TestContext.Properties["webAppUrl"].ToString();
+            appURL = "https://bpcalculator20181121110822.azurewebsites.net/bloodpressure";
             string browser = "Chrome";
             switch (browser)
             {
