@@ -39,16 +39,5 @@ steps:
     SearchPattern: '**\bin\**\*.pdb'
   continueOnError: true
 
-- task: CopyFiles@2
-  inputs:
-    Contents: |
-     **\*.dll
-     
-    TargetFolder: '$(build.artifactstagingdirectory)'
-
 - task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: '$(Parameters.ArtifactName)'
-    publishLocation: Container
 
