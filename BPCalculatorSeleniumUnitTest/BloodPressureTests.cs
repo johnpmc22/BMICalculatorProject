@@ -146,6 +146,80 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsFalse(driver.FindElement(By.TagName("body")).Text.Contains("The value \'\' is invalid."));
         }
 
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void InvalidAgeField_False()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Age")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).Click();
+            Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("Age Must be between the ages of 1 and 120 years"));
+        }
+
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void ReturnLowBloodPressureBaby_True()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Systolic")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).SendKeys("75");
+            driver.FindElement(By.Id("BP_Diastolic")).Clear();
+            driver.FindElement(By.Id("BP_Diastolic")).SendKeys("50");
+            driver.FindElement(By.Id("BP_Age")).Clear();
+            driver.FindElement(By.Id("BP_Age")).SendKeys("1");
+            driver.FindElement(By.Id("BP_Systolic")).Click();
+            driver.FindElement(By.XPath("//*[@id='form1']/div[4]"));
+            Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("Low Blood Pressure Baby Age Range"));
+        }
+
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void ReturnHighBloodPressureMidlife_True()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Systolic")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).SendKeys("144");
+            driver.FindElement(By.Id("BP_Diastolic")).Clear();
+            driver.FindElement(By.Id("BP_Diastolic")).SendKeys("90");
+            driver.FindElement(By.Id("BP_Age")).Clear();
+            driver.FindElement(By.Id("BP_Age")).SendKeys("45");
+            driver.FindElement(By.Id("BP_Systolic")).Click();
+            driver.FindElement(By.XPath("//*[@id='form1']/div[4]"));
+            Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("High Blood Pressure MidLife Age Range"));
+        }
+
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void InvalidAge_ReturnsTrue()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Systolic")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).SendKeys("120");
+            driver.FindElement(By.Id("BP_Diastolic")).Clear();
+            driver.FindElement(By.Id("BP_Diastolic")).SendKeys("80");
+            driver.FindElement(By.Id("BP_Age")).Clear();
+            driver.FindElement(By.Id("BP_Age")).SendKeys("125");
+            driver.FindElement(By.Id("BP_Systolic")).Click();
+            driver.FindElement(By.XPath("//*[@id='form1']/div[4]"));
+            Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("Invalid Age Value"));
+        }
+
+        [TestMethod]
+        [TestCategory("Chrome")]
+        public void InvalidAge_ReturnsFalse()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Systolic")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).SendKeys("120");
+            driver.FindElement(By.Id("BP_Diastolic")).Clear();
+            driver.FindElement(By.Id("BP_Diastolic")).SendKeys("80");
+            driver.FindElement(By.Id("BP_Age")).Clear();
+            driver.FindElement(By.Id("BP_Age")).SendKeys("37");
+            driver.FindElement(By.Id("BP_Systolic")).Click();
+            driver.FindElement(By.XPath("//*[@id='form1']/div[4]"));
+            Assert.IsFalse(driver.FindElement(By.TagName("body")).Text.Contains("Invalid Age Value"));
+        }
+
         /// <summary>
         ///Gets or sets the test context which provides
         ///information about and functionality for the current test run.
@@ -167,7 +241,7 @@ namespace BPCalculatorSeleniumUnitTest
         {
             //Run Settings run locally without issue but do not run in Azzure devOps
             //appURL = TestContext.Properties["webAppUrl"].ToString();
-            appURL = "https://bpcalculator20181121110822.azurewebsites.net/bloodpressure";
+            appURL = "https://bpcalculator20181128071159.azurewebsites.net/bloodpressure";
             string browser = "Chrome";
             switch (browser)
             {
