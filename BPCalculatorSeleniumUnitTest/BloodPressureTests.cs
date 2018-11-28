@@ -165,6 +165,7 @@ namespace BPCalculatorSeleniumUnitTest
         [TestInitialize()]
         public void SetupTest()
         {
+            //Run Settings run locally without issue but do not run in Azzure devOps
             //appURL = TestContext.Properties["webAppUrl"].ToString();
             appURL = "https://bpcalculator20181121110822.azurewebsites.net/bloodpressure";
             string browser = "Chrome";

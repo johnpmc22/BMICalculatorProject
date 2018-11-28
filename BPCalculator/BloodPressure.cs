@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 
 namespace BPCalculator
 {
@@ -49,8 +47,7 @@ namespace BPCalculator
         public const int DiastolicMax = 100;
         public const int AgeMin = 0;
         public const int AgeMax = 64;
-
-
+        
         [Range(SystolicMin, SystolicMax, ErrorMessage = "Invalid Systolic Value")]
         public int Systolic { get; set; }                       // mmHG
 
