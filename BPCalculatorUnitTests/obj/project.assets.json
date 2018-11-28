@@ -14562,11 +14562,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\BPCalculatorUnitTests\\BPCalculatorUnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\ejohmci\\repos\\BPCalculatorProject\\BPCalculatorUnitTests\\BPCalculatorUnitTests.csproj",
       "projectName": "BPCalculatorUnitTests",
-      "projectPath": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\BPCalculatorUnitTests\\BPCalculatorUnitTests.csproj",
+      "projectPath": "C:\\Users\\ejohmci\\repos\\BPCalculatorProject\\BPCalculatorUnitTests\\BPCalculatorUnitTests.csproj",
       "packagesPath": "C:\\Users\\ejohmci\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\BPCalculatorUnitTests\\obj\\",
+      "outputPath": "C:\\Users\\ejohmci\\repos\\BPCalculatorProject\\BPCalculatorUnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14585,8 +14585,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\BPCalculator\\BPCalculator.csproj": {
-              "projectPath": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\BPCalculator\\BPCalculator.csproj"
+            "C:\\Users\\ejohmci\\repos\\BPCalculatorProject\\BPCalculator\\BPCalculator.csproj": {
+              "projectPath": "C:\\Users\\ejohmci\\repos\\BPCalculatorProject\\BPCalculator\\BPCalculator.csproj"
             }
           }
         }

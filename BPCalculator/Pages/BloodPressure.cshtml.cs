@@ -13,7 +13,7 @@ namespace BPCalculator.Pages
         // setup initial data
         public void OnGet()
         {
-            BP = new BloodPressure() { Systolic = 100, Diastolic = 60 };
+            BP = new BloodPressure() { Systolic = 100, Diastolic = 60, Age = 24 };
         }
 
         // POST, validate
@@ -23,6 +23,10 @@ namespace BPCalculator.Pages
             if (!(BP.Systolic > BP.Diastolic))
             {
                 ModelState.AddModelError("", "Systolic must be greater than Diastolic");
+            }
+            if (BP.Age < 1 || BP.Age > 120)
+            {
+                ModelState.AddModelError("", "Age Must be between the ages of 1 and 120 years");
             }
             return Page();
         }
