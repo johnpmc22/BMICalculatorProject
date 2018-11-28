@@ -13431,11 +13431,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\BPCalculator\\BPCalculator.csproj",
+      "projectUniqueName": "C:\\Users\\ejohmci\\repos\\BPCalculatorProject\\BPCalculator\\BPCalculator.csproj",
       "projectName": "BPCalculator",
-      "projectPath": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\BPCalculator\\BPCalculator.csproj",
+      "projectPath": "C:\\Users\\ejohmci\\repos\\BPCalculatorProject\\BPCalculator\\BPCalculator.csproj",
       "packagesPath": "C:\\Users\\ejohmci\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ejohmci\\repos\\BMICalculatorProject\\BPCalculator\\obj\\",
+      "outputPath": "C:\\Users\\ejohmci\\repos\\BPCalculatorProject\\BPCalculator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
