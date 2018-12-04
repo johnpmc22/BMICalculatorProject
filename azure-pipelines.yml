@@ -34,9 +34,9 @@ steps:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
 
-- task: VSTest@3
+- task: VSTest@2
   inputs:
-    testAssemblyVer2: |
+    testAssemblyVer2: 
      **\bin\$(BuildConfiguration)\netcoreapp2.1\*BPCalculatorSeleniumUnitTest*.dll
     codeCoverageEnabled: true
     platform: '$(BuildPlatform)'
@@ -47,10 +47,14 @@ steps:
     SearchPattern: '**\bin\**\*.pdb'
   continueOnError: true
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(build.sourcesdirectory)'
+    Contents: '**\bin\$(BuildConfiguration)\**'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
 - task: PublishBuildArtifacts@1
   inputs:
-    testAssemblyVer2: |
-     **\bin\$(BuildConfiguration)\netcoreapp2.1\*BPCalculatorSeleniumUnitTest*.dll
-    codeCoverageEnabled: true
-    platform: '$(BuildPlatform)'
-    configuration: '$(BuildConfiguration)'
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: drop
+    publishLocation: Container
