@@ -24,7 +24,7 @@ namespace BPCalculator.Pages
             {
                 ModelState.AddModelError("", "Systolic must be greater than Diastolic");
             }
-            if (BP.Age < 1 || BP.Age > 120)
+            if (!(BP.Age > 1 && BP.Age < 120))
             {
                 ModelState.AddModelError("", "Age Must be between the ages of 1 and 120 years");
             }
