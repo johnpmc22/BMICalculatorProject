@@ -34,10 +34,23 @@ steps:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
 
+- task: VSTest@3
+  inputs:
+    testAssemblyVer2: |
+     **\bin\$(BuildConfiguration)\netcoreapp2.1\*BPCalculatorSeleniumUnitTest*.dll
+    codeCoverageEnabled: true
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+
 - task: PublishSymbols@1
   inputs:
     SearchPattern: '**\bin\**\*.pdb'
   continueOnError: true
 
 - task: PublishBuildArtifacts@1
-
+  inputs:
+    testAssemblyVer2: |
+     **\bin\$(BuildConfiguration)\netcoreapp2.1\*BPCalculatorSeleniumUnitTest*.dll
+    codeCoverageEnabled: true
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
