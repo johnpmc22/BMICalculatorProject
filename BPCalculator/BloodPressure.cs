@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-/* John McIntyre Blood Pressure Calculator Part 1*/
 namespace BPCalculator
 {
     // BP categories
