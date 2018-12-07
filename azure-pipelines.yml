@@ -25,6 +25,9 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+    #- task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@1
+    #displayName: 'Run Code Analysis'
+
 - task: VSTest@2
   inputs:
     testAssemblyVer2: |
@@ -33,14 +36,6 @@ steps:
     codeCoverageEnabled: true
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
-
-    #- task: VSTest@2
-    #inputs:
-    #testAssemblyVer2: 
-    # **\bin\$(BuildConfiguration)\netcoreapp2.1\*BPCalculatorSeleniumUnitTest*.dll
-    #codeCoverageEnabled: true
-    #platform: '$(BuildPlatform)'
-    #configuration: '$(BuildConfiguration)'
 
 - task: PublishSymbols@1
   inputs:
@@ -54,7 +49,3 @@ steps:
     TargetFolder: '$(build.artifactstagingdirectory)'
 
 - task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: drop
-    publishLocation: Container
