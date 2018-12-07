@@ -80,6 +80,20 @@ namespace BPCalculatorSeleniumUnitTest
 
         [TestMethod]
         [TestCategory("Chrome")]
+        public void ReturnLowBloodPressure_True()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Systolic")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).SendKeys("80");
+            driver.FindElement(By.Id("BP_Diastolic")).Clear();
+            driver.FindElement(By.Id("BP_Diastolic")).SendKeys("60");
+            driver.FindElement(By.Id("BP_Systolic")).Click();
+            driver.FindElement(By.XPath("//*[@id='form1']/div[3]"));
+            Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("Low Blood Pressure"));
+        }
+
+        [TestMethod]
+        [TestCategory("Chrome")]
         public void ReturnHighBloodPressure_False()
         {
             driver.Navigate().GoToUrl(appURL + "/");
