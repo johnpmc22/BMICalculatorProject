@@ -10,6 +10,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  publishConfiguration: '/nologo /p:PublishProfile=$(buildConfiguration) /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /maxcpucount:1 /p:platform="Any CPU" /p:configuration=$(buildConfiguration)'
 
 steps:
 - task: NuGetToolInstaller@0
@@ -25,9 +26,6 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-    #- task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@1
-    #displayName: 'Run Code Analysis'
-
 - task: VSTest@2
   inputs:
     testAssemblyVer2: |
@@ -37,11 +35,14 @@ steps:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
 
-- task: PublishSymbols@1
+#- task: PublishSymbols@1
+#  displayName: 'Publish solution'
+#  inputs:
+#    SearchPattern: '**\bin\**\*.pdb'
+#    continueOnError: true
+
+- script: dotnet publish BPCalculator.sln $(publishConfiguration)
   displayName: 'Publish solution'
-  inputs:
-    SearchPattern: '**\bin\**\*.pdb'
-    continueOnError: true
 
 - task: CopyFiles@2
   inputs:
