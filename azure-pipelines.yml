@@ -10,7 +10,6 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  publishConfiguration: '/nologo /p:PublishProfile=$(buildConfiguration) /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /maxcpucount:1 /p:platform="Any CPU" /p:configuration=$(buildConfiguration)'
 
 steps:
 - task: NuGetToolInstaller@0
@@ -35,14 +34,11 @@ steps:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
 
-#- task: PublishSymbols@1
-#  displayName: 'Publish solution'
-#  inputs:
-#    SearchPattern: '**\bin\**\*.pdb'
-#    continueOnError: true
-
-- script: dotnet publish BPCalculator.sln $(publishConfiguration)
+- task: PublishSymbols@1
   displayName: 'Publish solution'
+  inputs:
+    SearchPattern: '**\bin\**\*.pdb'
+    continueOnError: true
 
 - task: CopyFiles@2
   inputs:
