@@ -22,6 +22,7 @@ namespace BPCalculatorSeleniumUnitTest
         {
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void BasicPageLoadHeaderCheck_True()
@@ -31,6 +32,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsTrue(driver.Title.Contains("BP Category Calculator"), "Verified title of the page");
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void BasicPageLoadHeaderCheck_False()
@@ -40,6 +42,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsFalse(driver.Title.Contains("BPI Category Calculators"), "Verified title of the page");
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void ReturnNormalBloodPressure_True()
@@ -52,6 +55,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("Normal Blood Pressure"));
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void ReturnNormalBloodPressure_False()
@@ -64,6 +68,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsFalse(driver.FindElement(By.TagName("body")).Text.Contains("Normal Blood Pressure"));
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void ReturnHighBloodPressure_True()
@@ -78,6 +83,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("High Blood Pressure"));
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void ReturnLowBloodPressure_True()
@@ -92,6 +98,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("Low Blood Pressure"));
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void ReturnHighBloodPressure_False()
@@ -106,6 +113,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsFalse(driver.FindElement(By.TagName("body")).Text.Contains("High Blood Pressure"));
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void SystolicGreaterThanDiastolic_True()
@@ -120,6 +128,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("Systolic must be greater than Diastolic"));
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void SystolicGreaterThanDiastolic_False()
@@ -134,6 +143,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsFalse(driver.FindElement(By.TagName("body")).Text.Contains("Systolic must be greater than Diastolic"));
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void InvalidFields_True()
@@ -147,6 +157,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("The value \'\' is invalid."));
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void InvalidFields_False()
@@ -160,6 +171,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsFalse(driver.FindElement(By.TagName("body")).Text.Contains("The value \'\' is invalid."));
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void InvalidAgeField_False()
@@ -170,6 +182,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("Age Must be between the ages of 1 and 120 years"));
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void ReturnLowBloodPressureBaby_True()
@@ -202,6 +215,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("High Blood Pressure MidLife Age Range"));
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void InvalidAge_ReturnsTrue()
@@ -218,6 +232,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsTrue(driver.FindElement(By.TagName("body")).Text.Contains("Invalid Age Value"));
         }
 
+        [Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void InvalidAge_ReturnsFalse()
@@ -233,6 +248,22 @@ namespace BPCalculatorSeleniumUnitTest
             driver.FindElement(By.XPath("//*[@id='form1']/div[4]"));
             Assert.IsFalse(driver.FindElement(By.TagName("body")).Text.Contains("Invalid Age Value"));
         }
+
+        /*[TestMethod]
+        [TestCategory("Chrome")]
+        public void InvalidAge_ReturnsFalse_DemoTest()
+        {
+            driver.Navigate().GoToUrl(appURL + "/");
+            driver.FindElement(By.Id("BP_Systolic")).Clear();
+            driver.FindElement(By.Id("BP_Systolic")).SendKeys("120");
+            driver.FindElement(By.Id("BP_Diastolic")).Clear();
+            driver.FindElement(By.Id("BP_Diastolic")).SendKeys("80");
+            driver.FindElement(By.Id("BP_Age")).Clear();
+            driver.FindElement(By.Id("BP_Age")).SendKeys("75");
+            driver.FindElement(By.Id("BP_Systolic")).Click();
+            driver.FindElement(By.XPath("//*[@id='form1']/div[4]"));
+            Assert.IsFalse(driver.FindElement(By.TagName("body")).Text.Contains("Invalid Age Value"));
+        }*/
 
         /// <summary>
         ///Gets or sets the test context which provides
