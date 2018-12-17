@@ -32,7 +32,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsTrue(driver.Title.Contains("BP Category Calculator"), "Verified title of the page");
         }
 
-        [Timeout(60000)]
+        /*[Timeout(60000)]
         [TestMethod]
         [TestCategory("Chrome")]
         public void BasicPageLoadHeaderCheck_False()
@@ -249,7 +249,7 @@ namespace BPCalculatorSeleniumUnitTest
             Assert.IsFalse(driver.FindElement(By.TagName("body")).Text.Contains("Invalid Age Value"));
         }
 
-        /*[TestMethod]
+        [TestMethod]
         [TestCategory("Chrome")]
         public void InvalidAge_ReturnsFalse_DemoTest()
         {
