@@ -9,3 +9,14 @@ C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator\obj\Release\netcoreapp2
 C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator\obj\Release\netcoreapp2.0\BPCalculator.AssemblyInfo.cs
 C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator\obj\Release\netcoreapp2.0\BPCalculator.dll
 C:\Users\ejohmci\repos\BMICalculatorProject\BPCalculator\obj\Release\netcoreapp2.0\BPCalculator.pdb
+C:\Users\ejohmci\repos\BPCalculatorProject\BPCalculator\bin\Release\netcoreapp2.0\BPCalculator.deps.json
+C:\Users\ejohmci\repos\BPCalculatorProject\BPCalculator\bin\Release\netcoreapp2.0\BPCalculator.runtimeconfig.json
+C:\Users\ejohmci\repos\BPCalculatorProject\BPCalculator\bin\Release\netcoreapp2.0\BPCalculator.runtimeconfig.dev.json
+C:\Users\ejohmci\repos\BPCalculatorProject\BPCalculator\bin\Release\netcoreapp2.0\BPCalculator.dll
+C:\Users\ejohmci\repos\BPCalculatorProject\BPCalculator\bin\Release\netcoreapp2.0\BPCalculator.pdb
+C:\Users\ejohmci\repos\BPCalculatorProject\BPCalculator\obj\Release\netcoreapp2.0\BPCalculator.csprojAssemblyReference.cache
+C:\Users\ejohmci\repos\BPCalculatorProject\BPCalculator\obj\Release\netcoreapp2.0\BPCalculator.csproj.CoreCompileInputs.cache
+C:\Users\ejohmci\repos\BPCalculatorProject\BPCalculator\obj\Release\netcoreapp2.0\BPCalculator.AssemblyInfoInputs.cache
+C:\Users\ejohmci\repos\BPCalculatorProject\BPCalculator\obj\Release\netcoreapp2.0\BPCalculator.AssemblyInfo.cs
+C:\Users\ejohmci\repos\BPCalculatorProject\BPCalculator\obj\Release\netcoreapp2.0\BPCalculator.dll
+C:\Users\ejohmci\repos\BPCalculatorProject\BPCalculator\obj\Release\netcoreapp2.0\BPCalculator.pdb

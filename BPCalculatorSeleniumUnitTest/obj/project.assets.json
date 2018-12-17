@@ -2653,6 +2653,9 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.NETCore.TestHost/2.0.8": {
+        "type": "package"
+      },
       "Microsoft.Rest.ClientRuntime/2.3.8": {
         "type": "package",
         "dependencies": {
@@ -8263,6 +8266,20 @@
         "microsoft.netcore.targets.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.NETCore.TestHost/2.0.8": {
+      "sha512": "Pwq3RGXeCd9XoNsBT7vZO6AkRrxjPzWzp/K8F9NF/PrCG1994X12nnD25HAboGA6YqtSpeIHkS1w2XTVgQZmbQ==",
+      "type": "package",
+      "path": "microsoft.netcore.testhost/2.0.8",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "microsoft.netcore.testhost.2.0.8.nupkg.sha512",
+        "microsoft.netcore.testhost.nuspec",
+        "runtime.json",
         "version.txt"
       ]
     },
@@ -14724,6 +14741,7 @@
       "MSTest.TestFramework >= 1.3.2",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.1.0",
+      "Microsoft.NETCore.TestHost >= 2.0.8",
       "PhantomJS >= 2.1.1",
       "Selenium.Firefox.WebDriver >= 0.22.0",
       "Selenium.PhantomJS.WebDriver >= 2.1.1",
@@ -14794,6 +14812,10 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "Microsoft.NETCore.TestHost": {
+            "target": "Package",
+            "version": "[2.0.8, )"
           },
           "PhantomJS": {
             "target": "Package",
